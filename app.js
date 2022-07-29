@@ -6,11 +6,24 @@ let submitBtn = document.getElementById("submitBtn");
 
 submitBtn.addEventListener("click", function(){
    if(fullName.value=='' || email.value=='' || phone.value=='' || textArea.value== ''){
-      alert("missing")
+      alert("Leaving any input blank is not acceptable")
       submitBtn.style.backgroundColor = " red";
+      fullName.style.borderColor = "red";
+      email.style.borderColor = "red";
+      phone.style.borderColor = "red";
+      textArea.style.borderColor = "red";
    }else{
-      alert("SuccessFully Send");
-      submitBtn.style.backgroundColor = "transfarent";
+      alert("SuccessFully Send Your Massege");
+      submitBtn.style.backgroundColor = "green";
+      fullName.style.borderColor = "green";
+      email.style.borderColor = "green";
+      phone.style.borderColor = "green";
+      textArea.style.borderColor = "green";
+
+      fullName.value = "";
+      email.value = "";
+      phone.value = "";
+      textArea.value = "";
    }
 
 })
@@ -31,13 +44,4 @@ let formControle = document.querySelectorAll(".form-control");
   };
 
 
-  //  portfolio image selector 
-
-  let image = document.querySelectorAll(".portImg");
-
-  for(var i= 0; i<image.length ; i++){
-         image[i].addEventListener("click", function(){
-            console.log(11111)
-         })
-  }
-
+ 
